@@ -11,7 +11,7 @@ tags:
 extra_resources:
 connections:
   - series: Basic C++
-    title: Classes and Structs
+    title: Structs and Classes
   - series: Basic C++
     title: The Const Keyword
   - series: Intermediate C++

@@ -1,4 +1,4 @@
-# Basic C++: Enums
+# Intermediate C++: Enums
 
 Use enums to define custom data types with specific values for your program.
 This example starts by showing some C style enums that you may encounter.

@@ -101,11 +101,32 @@ int main()
 
     }
     cin.get();
+    
+
+    {
+        // The previous example is nice, but C++ has since added an even better implementation: enum class.
+        enum class Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY };
+
+        // Enum class makes the enum values exist within the scope the enum type.
+        // Basically, this means we can have other variables with the same name without having problems.
+        
+        // Day d = SUNDAY;      // Incorrect
+        Day d = Day::SUNDAY;    // Correct!
+
+
+        // This also prevents us from doing strange things with our enumerations that we could do if they were ints.
+
+        // int x = Day::FRIDAY; // Nope
+        // Day d = Day::MONDAY + Day::WEDNESDAY; // Nope
+    }
+    cin.get();
+
+
 
 
     {
         // One more thing, we can use enums as bitfields to store a bunch of booleans
-        enum Toppings { CHEESE = 1, PEPPERONI = 2, ONIONS = 4, OLIVES = 8, PINEAPPLE = 16 };
+        enum Topping { CHEESE = 1, PEPPERONI = 2, ONIONS = 4, OLIVES = 8, PINEAPPLE = 16 };
         
         // Using bitwise or, we can combine our values into one number that stores the data of each bit as a boolean.
         int pizza = CHEESE | PEPPERONI | OLIVES;
